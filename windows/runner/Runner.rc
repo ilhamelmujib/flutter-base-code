@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "tasknotes" "\0"
+            VALUE "FileDescription", "flutterbasecode" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "tasknotes" "\0"
+            VALUE "InternalName", "flutterbasecode" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "tasknotes.exe" "\0"
-            VALUE "ProductName", "tasknotes" "\0"
+            VALUE "OriginalFilename", "flutterbasecode.exe" "\0"
+            VALUE "ProductName", "flutterbasecode" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

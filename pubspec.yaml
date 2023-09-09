@@ -1,4 +1,4 @@
-name: tasknotes
+name: flutterbasecode
 description: A new Flutter project.
 publish_to: 'none' # Remove this line if you wish to publish
 version: 1.0.0+1
@@ -59,23 +59,3 @@ flutter:
     - family: InterSemiBold
       fonts:
         - asset: assets/fonts/InterSemiBold.otf
-  assets:
-    - assets/icons/ic_back.svg
-    - assets/icons/ic_check_done.svg
-    - assets/icons/ic_check_undone.svg
-    - assets/icons/ic_close.svg
-    - assets/icons/ic_delete_menu.svg
-    - assets/icons/ic_done.svg
-    - assets/icons/ic_done_menu.svg
-    - assets/icons/ic_edit_menu.svg
-    - assets/icons/ic_favorite.svg
-    - assets/icons/ic_forward.svg
-    - assets/icons/ic_google.svg
-    - assets/icons/ic_logout.svg
-    - assets/icons/ic_plus.svg
-    - assets/icons/ic_search.svg
-    - assets/icons/ic_unfavorite.svg
-    - assets/images/img_avatar.jpg
-    - assets/images/img_logo.svg
-    - assets/images/img_sign.svg
-
