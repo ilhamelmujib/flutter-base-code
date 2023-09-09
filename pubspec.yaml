@@ -1,0 +1,81 @@
+name: tasknotes
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  get: ^4.6.5
+  dio: ^5.3.2
+  sqflite: ^2.2.6
+  equatable: ^2.0.5
+  dartz: ^0.10.1
+  intl: ^0.18.1
+  google_sign_in: ^6.1.5
+  get_storage: ^2.1.1
+
+  pretty_dio_logger: ^1.3.1
+  cached_network_image: ^3.1.0+1
+  flutter_screenutil: ^5.8.4
+  flutter_svg: ^2.0.7
+  lottie: ^2.6.0
+  flutter_linkify: ^6.0.0
+  url_launcher: ^6.1.12
+  percent_indicator: ^4.2.3
+  bottom_sheet: ^4.0.0
+  card_slider: ^1.0.5
+  html_editor_enhanced: ^2.5.1
+  table_calendar: ^3.0.9
+  flutter_time_picker_spinner: ^2.0.0
+  html: ^0.15.4
+
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: InterBold
+      fonts:
+        - asset: assets/fonts/InterBold.otf
+    - family: InterExtraBold
+      fonts:
+        - asset: assets/fonts/InterExtraBold.otf
+    - family: InterMedium
+      fonts:
+        - asset: assets/fonts/InterMedium.otf
+    - family: InterRegular
+      fonts:
+        - asset: assets/fonts/InterRegular.otf
+    - family: InterSemiBold
+      fonts:
+        - asset: assets/fonts/InterSemiBold.otf
+  assets:
+    - assets/icons/ic_back.svg
+    - assets/icons/ic_check_done.svg
+    - assets/icons/ic_check_undone.svg
+    - assets/icons/ic_close.svg
+    - assets/icons/ic_delete_menu.svg
+    - assets/icons/ic_done.svg
+    - assets/icons/ic_done_menu.svg
+    - assets/icons/ic_edit_menu.svg
+    - assets/icons/ic_favorite.svg
+    - assets/icons/ic_forward.svg
+    - assets/icons/ic_google.svg
+    - assets/icons/ic_logout.svg
+    - assets/icons/ic_plus.svg
+    - assets/icons/ic_search.svg
+    - assets/icons/ic_unfavorite.svg
+    - assets/images/img_avatar.jpg
+    - assets/images/img_logo.svg
+    - assets/images/img_sign.svg
+
