@@ -13,7 +13,7 @@ class MovieController extends GetxController {
   MovieController(this.fetchNowPlayingUseCase, this.toggleFavoriteUseCase);
 
   final MovieState state = MovieState();
-  final Rx<MovieIntent> intent = MovieIntent.fetchNowPlaying.obs;
+  final Rx<MovieIntent> intent = MovieIntent.none.obs;
 
   @override
   void onInit() {
@@ -28,6 +28,7 @@ class MovieController extends GetxController {
           break;
       }
     });
+    intent.value = MovieIntent.fetchNowPlaying;
   }
 
   void _fetchNowPlaying() async {
