@@ -13,7 +13,7 @@ class MovieScreen extends GetView<MovieController> {
         title: const Text('Daftar Film'),
       ),
       body: Obx(
-        () => controller.state.isLoading.value
+        () => controller.state.nowPlaying.value.isEmpty
             ? const Center(
                 child: CircularProgressIndicator(),
               )

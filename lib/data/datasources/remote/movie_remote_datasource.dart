@@ -1,17 +1,23 @@
 import 'package:flutterbasecode/data/datasources/remote/client/api_service.dart';
-import 'package:flutterbasecode/data/datasources/remote/client/base_response.dart';
+import 'package:flutterbasecode/data/models/response_model.dart';
 import 'package:flutterbasecode/data/models/movie_model.dart';
 
-class MovieRemoteDataSource {
+abstract class MovieRemoteDataSource {
+  Future<List<MovieModel>> fetchNowPlaying();
+}
+
+class MovieRemoteDataSourceImpl extends MovieRemoteDataSource {
   final ApiService apiService;
 
-  MovieRemoteDataSource(this.apiService);
+  MovieRemoteDataSourceImpl(this.apiService);
 
-  Future<List<MovieModel>> fetchMovies() async {
+  @override
+  Future<List<MovieModel>> fetchNowPlaying() async {
     try {
-      final response = await apiService.get('/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc');
-      final baseResponse = BaseResponse.fromJson(response, (data) => MovieModel.fromJson(data));
-      return baseResponse.results;
+      final response = await apiService
+          .get("/movie/now_playing", queryParameters: {"page": 1});
+      final data = ResponseModel.fromJson(response, (data) => MovieModel.fromJson(data));
+      return data.results;
     } catch (e) {
       rethrow;
     }

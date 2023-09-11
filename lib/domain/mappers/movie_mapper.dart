@@ -1,6 +1,7 @@
 
 import 'package:flutterbasecode/data/models/movie_model.dart';
 import 'package:flutterbasecode/domain/entities/movie_entity.dart';
+import 'package:get/get.dart';
 
 class MovieMapper {
   static MovieEntity fromModel(MovieModel model) {
@@ -11,6 +12,7 @@ class MovieMapper {
       releaseDate: model.releaseDate,
       posterPath: model.posterPath,
       voteAverage: model.voteAverage.toDouble(),
+      isFavorite: false.obs
     );
   }
 

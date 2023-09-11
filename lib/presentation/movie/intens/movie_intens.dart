@@ -1,4 +1,6 @@
+import 'package:flutterbasecode/data/models/favorite_model.dart';
+
 enum MovieIntent {
-  none,
-  fetchMovie,
+  fetchNowPlaying,
+  toggleFavorite;
 }

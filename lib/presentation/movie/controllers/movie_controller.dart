@@ -1,46 +1,48 @@
+import 'package:flutterbasecode/data/models/favorite_model.dart';
 import 'package:flutterbasecode/domain/entities/movie_entity.dart';
+import 'package:flutterbasecode/domain/usecases/favorite/toggle_favorite_usecase.dart';
 import 'package:flutterbasecode/presentation/movie/intens/movie_intens.dart';
 import 'package:flutterbasecode/presentation/movie/states/movie_state.dart';
 import 'package:get/get.dart';
-import 'package:flutterbasecode/domain/usecases/movie/movie_usecase.dart';
+import 'package:flutterbasecode/domain/usecases/movie/fetch_now_playing_usecase.dart';
 
 class MovieController extends GetxController {
-  final MovieUseCase movieUseCase;
+  final FetchNowPlayingUseCase fetchNowPlayingUseCase;
+  final ToggleFavoriteUseCase toggleFavoriteUseCase;
 
-  MovieController(this.movieUseCase);
+  MovieController(this.fetchNowPlayingUseCase, this.toggleFavoriteUseCase);
 
   final MovieState state = MovieState();
-  final Rx<MovieIntent> intent = MovieIntent.none.obs;
+  final Rx<MovieIntent> intent = MovieIntent.fetchNowPlaying.obs;
 
   @override
   void onInit() {
     super.onInit();
-    _handleIntent();
-    intent.value = MovieIntent.fetchMovie;
-  }
-
-  void _handleIntent() {
     intent.listen((intent) {
       switch (intent) {
-        case MovieIntent.fetchMovie:
-          _fetchMovies();
+        case MovieIntent.fetchNowPlaying:
+          _fetchNowPlaying();
+        case MovieIntent.toggleFavorite:
+          // _toggleFavorite();
         default:
           break;
       }
     });
   }
 
-  void _fetchMovies() async {
+  void _fetchNowPlaying() async {
     try {
-      state.isLoading.value = true;
-      final result = await movieUseCase.fetchMovies();
-      state.movies.value = result;
-      intent.value = MovieIntent.none;
-      state.isLoading.value = false;
+      state.nowPlaying.value = await fetchNowPlayingUseCase.execute();
     } catch (e) {
-      intent.value = MovieIntent.none;
-      state.isLoading.value = false;
-      // Handle error
+      print(e);
+    }
+  }
+
+  void _toggleFavorite(FavoriteModel model) async {
+    try {
+      await toggleFavoriteUseCase.execute(model);
+    } catch (e) {
+      print(e);
     }
   }
 }

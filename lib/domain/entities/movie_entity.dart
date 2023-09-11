@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 class MovieEntity {
   final int id;
   final String title;
@@ -5,6 +7,7 @@ class MovieEntity {
   final String posterPath;
   final String releaseDate;
   final double voteAverage;
+  final RxBool isFavorite;
 
   MovieEntity({
     required this.id,
@@ -13,5 +16,6 @@ class MovieEntity {
     required this.posterPath,
     required this.releaseDate,
     required this.voteAverage,
+    required this.isFavorite,
   });
 }
