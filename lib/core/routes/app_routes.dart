@@ -1,5 +1,5 @@
 part of 'app_pages.dart';
 
 abstract class AppRoutes {
-  static const counter = '/counter';
+  static const movie = '/movie';
 }

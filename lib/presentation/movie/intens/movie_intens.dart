@@ -1,0 +1,4 @@
+enum MovieIntent {
+  none,
+  fetchMovie,
+}

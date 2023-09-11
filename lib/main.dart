@@ -7,7 +7,7 @@ import 'core/routes/app_pages.dart';
 
 Future<void> main() async {
   await GetStorage.init();
-  await Depedency.init();
+  await Dependency.init();
   runApp(const MyApp());
 }
 

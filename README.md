@@ -24,36 +24,42 @@ lib/
 |   |-- utils/
 |-- domain/
 |   |-- entities/
-|   |   |-- counter_entity.dart
+|   |   |-- movie_entity.dart
 |   |-- repositories/
-|   |   |-- counter_repository.dart
+|   |   |-- movie_repository.dart
 |   |-- usecases/
-|   |   |-- counter_usecase.dart
+|   |   |-- movie_usecase.dart
 |   |-- mappers/
-|   |   |-- counter_mapper.dart
+|   |   |-- movie_mapper.dart
 |-- data/
 |   |-- repositories/
-|   |   |-- counter_repository_impl.dart
+|   |   |-- movie_repository_impl.dart
 |   |-- datasources/
 |   |   |-- remote/
-|   |   |   |-- counter_remote_datasource.dart
+|   |   |   |-- movie_remote_datasource.dart
+|   |   |   |-- client/
+|   |   |   |   |-- api_service.dart
+|   |   |   |   |-- base_response.dart
 |   |   |-- local/
-|   |   |   |-- counter_local_datasource.dart
+|   |   |   |-- movie_local_datasource.dart
 |   |-- models/
-|   |   |-- counter_model.dart
+|   |   |-- movie_model.dart
+|-- di/
+|   |-- dependency/
 |-- presentation/
-|   |-- counter/
+|   |-- movie/
+|   |   |-- bindings/
+|   |   |   |-- movie_binding.dart
 |   |   |-- screens/
-|   |   |   |-- counter_screen.dart
+|   |   |   |-- movie_screen.dart
 |   |   |-- controllers/
-|   |   |   |-- counter_controller.dart
-|   |   |-- state/
-|   |   |   |-- counter_state.dart
+|   |   |   |-- movie_controller.dart
+|   |   |-- states/
+|   |   |   |-- movie_state.dart
 |   |   |-- intents/
-|   |   |   |-- counter_intents.dart
+|   |   |   |-- movie_intent.dart
 |   |   |-- views/
-|   |   |   |-- counter_view.dart
-|   |   |-- counter.dart
+|   |   |   |-- movie_view.dart
 |-- main/
 |   |-- dependencies.dart
 
