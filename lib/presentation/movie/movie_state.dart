@@ -3,4 +3,5 @@ import 'package:get/get.dart';
 
 class MovieState {
   final nowPlaying = Rx<List<MovieEntity>>([]);
+  final popular = Rx<List<MovieEntity>>([]);
 }

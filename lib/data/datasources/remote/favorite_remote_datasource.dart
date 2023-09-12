@@ -14,8 +14,10 @@ class FavoriteRemoteDataSourceImpl extends FavoriteRemoteDataSource {
   @override
   Future<void> toggleFavorite(FavoriteModel model) async {
     try {
-      final response =
-          await apiService.post('account/9061926/favorite', model.toJson());
+      final response = await apiService.post(
+        '/account/9061926/favorite',
+        model.toJson(),
+      );
       final data = ResponseModel.fromJson(response, (data) => data);
       if (!data.success) {
         throw Exception(data.statusMessage);

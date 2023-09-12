@@ -1,5 +1,5 @@
-import 'package:flutterbasecode/presentation/movie/bindings/movie_binding.dart';
-import 'package:flutterbasecode/presentation/movie/screens/movie_screen.dart';
+import 'package:flutterbasecode/presentation/movie/movie_binding.dart';
+import 'package:flutterbasecode/presentation/movie/movie_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 part 'app_routes.dart';

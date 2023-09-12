@@ -11,7 +11,7 @@ class ApiService {
       if (response.statusCode == 200) {
         return response.data;
       } else {
-        throw Exception('Failed to load data from API');
+        throw Exception(response.statusMessage);
       }
     } catch (e) {
       rethrow;
@@ -21,10 +21,10 @@ class ApiService {
   Future<Map<String, dynamic>> post(String endpoint, Map<String, dynamic> data) async {
     try {
       final response = await client.post(endpoint, data: data);
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         return response.data;
       } else {
-        throw Exception('Failed to make a POST request to API');
+        throw Exception(response.statusMessage);
       }
     } catch (e) {
       rethrow;
@@ -37,7 +37,7 @@ class ApiService {
       if (response.statusCode == 200) {
         return response.data;
       } else {
-        throw Exception('Failed to make a PUT request to API');
+        throw Exception(response.statusMessage);
       }
     } catch (e) {
       rethrow;
@@ -50,7 +50,7 @@ class ApiService {
       if (response.statusCode == 200) {
         return response.data;
       } else {
-        throw Exception('Failed to make a DELETE request to API');
+        throw Exception(response.statusMessage);
       }
     } catch (e) {
       rethrow;

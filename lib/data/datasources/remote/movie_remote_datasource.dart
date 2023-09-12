@@ -4,6 +4,7 @@ import 'package:flutterbasecode/data/models/movie_model.dart';
 
 abstract class MovieRemoteDataSource {
   Future<List<MovieModel>> fetchNowPlaying();
+  Future<List<MovieModel>> fetchPopular();
 }
 
 class MovieRemoteDataSourceImpl extends MovieRemoteDataSource {
@@ -16,6 +17,18 @@ class MovieRemoteDataSourceImpl extends MovieRemoteDataSource {
     try {
       final response = await apiService
           .get("/movie/now_playing", queryParameters: {"page": 1});
+      final data = ResponseModel.fromJson(response, (data) => MovieModel.fromJson(data));
+      return data.results;
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<List<MovieModel>> fetchPopular() async {
+    try {
+      final response = await apiService
+          .get("/movie/popular", queryParameters: {"page": 2  });
       final data = ResponseModel.fromJson(response, (data) => MovieModel.fromJson(data));
       return data.results;
     } catch (e) {

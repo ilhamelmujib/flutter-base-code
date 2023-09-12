@@ -18,4 +18,15 @@ class MovieRepositoryImpl implements MovieRepository {
       rethrow;
     }
   }
+
+  @override
+  Future<List<MovieEntity>> fetchPopular() async {
+    try {
+      final movieData = await remoteDataSource.fetchPopular();
+      final movies = MovieMapper.fromModelList(movieData);
+      return movies;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }
