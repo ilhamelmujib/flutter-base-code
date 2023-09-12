@@ -7,7 +7,7 @@ class MovieEntity {
   final String posterPath;
   final String releaseDate;
   final double voteAverage;
-  final RxBool isFavorite;
+  final RxBool favorite;
 
   MovieEntity({
     required this.id,
@@ -16,6 +16,6 @@ class MovieEntity {
     required this.posterPath,
     required this.releaseDate,
     required this.voteAverage,
-    required this.isFavorite,
+    required this.favorite,
   });
 }

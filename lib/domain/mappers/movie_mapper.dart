@@ -12,7 +12,7 @@ class MovieMapper {
       releaseDate: model.releaseDate,
       posterPath: model.posterPath,
       voteAverage: model.voteAverage.toDouble(),
-      isFavorite: false.obs
+      favorite: false.obs
     );
   }
 

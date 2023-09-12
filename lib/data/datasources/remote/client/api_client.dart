@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 
-class ApiService {
+class ApiClient {
   final Dio client;
 
-  ApiService(this.client);
+  ApiClient(this.client);
 
   Future<Map<String, dynamic>> get(String endpoint, {Map<String, dynamic>? queryParameters}) async {
     try {

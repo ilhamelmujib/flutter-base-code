@@ -25,7 +25,6 @@ class MovieController extends GetxController {
   void _fetchNowPlaying() async {
     try {
       state.nowPlaying.value = await _fetchNowPlayingUseCase.execute();
-      Log.debug("SUCCESS _fetchNowPlaying");
     } catch (e) {
       Log.debug(e);
     }
@@ -34,7 +33,6 @@ class MovieController extends GetxController {
   void _fetchPopular() async {
     try {
       state.popular.value = await _fetchPopularUseCase.execute();
-      Log.debug("SUCCESS _fetchNowPlaying");
     } catch (e) {
       Log.debug(e);
     }
@@ -44,7 +42,6 @@ class MovieController extends GetxController {
     try {
       final model = FavoriteModel(mediaType: "movie", mediaId: mediaId, favorite: favorite);
       await _toggleFavoriteUseCase.execute(model);
-      Log.debug("SUCCESS toggleFavorite");
     } catch (e) {
       Log.debug(e);
     }

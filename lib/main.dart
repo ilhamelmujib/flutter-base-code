@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutterbasecode/di/depedency.dart';
+import 'package:flutterbasecode/di/dependency.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get_storage/get_storage.dart';
 import 'core/routes/app_pages.dart';
@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           title: "Hatam",
           initialRoute: AppPages.initial,
+          navigatorKey: Dependency.alice.getNavigatorKey(),
           getPages: AppPages.pages,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(

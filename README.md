@@ -42,22 +42,18 @@ lib/
 |   |   |   |   |-- base_response.dart
 |   |   |-- local/
 |   |   |   |-- movie_local_datasource.dart
+|   |   |   |-- database/
+|   |   |   |   |-- database_provider.dart
 |   |-- models/
 |   |   |-- movie_model.dart
 |-- di/
 |   |-- dependency/
 |-- presentation/
 |   |-- movie/
-|   |   |-- bindings/
-|   |   |   |-- movie_binding.dart
-|   |   |-- screens/
-|   |   |   |-- movie_screen.dart
-|   |   |-- controllers/
-|   |   |   |-- movie_controller.dart
-|   |   |-- states/
-|   |   |   |-- movie_state.dart
-|   |   |-- intents/
-|   |   |   |-- movie_intent.dart
+|   |   |-- movie_binding.dart
+|   |   |-- movie_screen.dart
+|   |   |-- movie_controller.dart
+|   |   |-- movie_state.dart
 |   |   |-- views/
 |   |   |   |-- movie_view.dart
 |-- main/

@@ -1,4 +1,4 @@
-import 'package:flutterbasecode/data/datasources/remote/client/api_service.dart';
+import 'package:flutterbasecode/data/datasources/remote/client/api_client.dart';
 import 'package:flutterbasecode/data/models/response_model.dart';
 import 'package:flutterbasecode/data/models/favorite_model.dart';
 
@@ -7,7 +7,7 @@ abstract class FavoriteRemoteDataSource {
 }
 
 class FavoriteRemoteDataSourceImpl extends FavoriteRemoteDataSource {
-  final ApiService apiService;
+  final ApiClient apiService;
 
   FavoriteRemoteDataSourceImpl(this.apiService);
 

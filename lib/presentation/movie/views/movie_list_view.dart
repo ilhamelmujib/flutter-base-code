@@ -41,14 +41,14 @@ class MovieListView extends GetView<MovieController> {
                 Text(movie.releaseDate),
                 IconButton(
                   icon: Obx(() => Icon(
-                    movie.isFavorite.value
+                    movie.favorite.value
                         ? Icons.favorite
                         : Icons.favorite_border,
-                    color: movie.isFavorite.value ? Colors.red : null,
+                    color: movie.favorite.value ? Colors.red : null,
                   )),
                   onPressed: () {
-                    movie.isFavorite.value = !movie.isFavorite.value;
-                    controller.toggleFavorite(movie.id, movie.isFavorite.value);
+                    movie.favorite.value = !movie.favorite.value;
+                    controller.toggleFavorite(movie.id, movie.favorite.value);
                   },
                 ),
               ],
