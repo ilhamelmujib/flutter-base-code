@@ -13,7 +13,7 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class Dependency {
   static Alice alice = Alice(
-    showNotification: false,
+    showNotification: kDebugMode,
     showInspectorOnShake: kDebugMode,
     darkTheme: false,
     maxCallsCount: 1000,
